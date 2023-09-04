@@ -21,6 +21,14 @@ createApp({
     },
     hidden() {
         this.showCat = false;
+    },
+    stringToIcon(i) {
+        if(this.foods[i].category == 'dog') {
+            return 'fa-solid fa-dog fa-2x'
+        }
+        else if (this.foods[i].category == 'cat') {
+            return 'fa-solid fa-cat'
+        }
     }
   }
 }).mount('#app')

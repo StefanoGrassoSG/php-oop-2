@@ -14,7 +14,7 @@ $foodsArray = [
         'chicken'
     ),
     new Food(
-        'Another Dog Food',
+        'Stuzzy Dog',
         'lorem ipsum dolor',
         25,
         'https://arcaplanet.vtexassets.com/arquivos/ids/266207-200-200/virtus-dog-protein-selection-anatra-400g.jpg?v=1780236292',
