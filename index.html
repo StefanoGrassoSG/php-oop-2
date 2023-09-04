@@ -20,7 +20,7 @@
                 <nav>
                     <ul>
                         <li>
-                            <span>
+                            <span @mouseover="show()">
                                 Categories
                             </span>
                         </li>
@@ -29,6 +29,14 @@
                                 Links
                             </span>
                         </li>
+                        <div class="dropdown" v-if="showCat == true" @mouseleave="hidden()"> 
+                            <div class="dogs" @click="getData()">
+                                Dogs
+                            </div>
+                            <div class="cats">
+                                Cats
+                            </div>
+                        </div>
                         <li>
                             <span>
                                 Contacts
@@ -36,19 +44,23 @@
                         </li>
                     </ul>
                 </nav>
-
                 <a href="database/db.php">VAI</a>
             </header>
+            
 
             <main>
                 <div class="container-cards">
-                    <div class="card">
-                        
+                    <div class="card" v-for="singleFood in foods">
+                        <div class="img-card">
+                            <img :src="singleFood.img" alt="">
+                        </div>
                     </div>
                 </div>
             </main>
         </div>
 
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js" integrity="sha512-aoTNnqZcT8B4AmeCFmiSnDlc4Nj/KPaZyB5G7JnOnUEkdNpCZs1LCankiYi01sLTyWy+m2P+W4XM+BuQ3Q4/Dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="js/script.js"></script>
     </body>
 </html>
