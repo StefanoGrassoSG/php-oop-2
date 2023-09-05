@@ -23,10 +23,10 @@ createApp({
         this.showCat = false;
     },
     stringToIcon(i) {
-        if(this.foods[i].category == 'dog') {
+        if(this.foods[i].category.name == 'dog') {
             return 'fa-solid fa-dog fa-2x'
         }
-        else if (this.foods[i].category == 'cat') {
+        else if (this.foods[i].category.name == 'cat') {
             return 'fa-solid fa-cat'
         }
     }
