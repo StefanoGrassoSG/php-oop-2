@@ -22,7 +22,7 @@ $foodsArray = [
     new Food(
         'Stuzzy Dog',
         'lorem ipsum dolor',
-        25,
+        1.90,
         'https://arcaplanet.vtexassets.com/arquivos/ids/266207-200-200/virtus-dog-protein-selection-anatra-400g.jpg?v=1780236292',
         $categories,
         true,

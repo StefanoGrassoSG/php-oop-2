@@ -13,11 +13,13 @@ class Product {
     public $category;
     public $avaiable;
 
-    public function __construct($name, $description, $price, $img, $category, $avaiable)
+    public function __construct(string $name, $description, float $price, $img, Categories $category, bool $avaiable)
     {
         $this->name = $name;
         $this->description = $description;
-        $this->price = $price;
+        if(is_numeric($price) && $price > 0) {
+            $this->price = $price;
+        }
         $this->img = $img;
         $this->category = $category;
         $this->avaiable = $avaiable;

@@ -29,6 +29,9 @@ createApp({
         else if (this.foods[i].category.name == 'cat') {
             return 'fa-solid fa-cat'
         }
-    }
+    },
+    formatPrice(price) {
+      return price.toFixed(2);
+  }
   }
 }).mount('#app')
