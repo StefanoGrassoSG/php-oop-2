@@ -7,8 +7,10 @@ $categories = new  Categories(
     'fa-solid fa-dog fa-2x'
 );
 
-$foodsArray = [
-    new Food(
+$foodsArray = [];
+
+try {
+    $dogFood = new Food(
         'Vigor Dog',
         'lorem ipsum dolor',
         29,
@@ -18,30 +20,39 @@ $foodsArray = [
         'humid',
         250,
         'chicken'
-    ),
-    new Food(
+    );
+    $dogFood2 = new Food(
         'Stuzzy Dog',
         'lorem ipsum dolor',
-        1.90,
+        12,
         'https://arcaplanet.vtexassets.com/arquivos/ids/266207-200-200/virtus-dog-protein-selection-anatra-400g.jpg?v=1780236292',
         $categories,
         true,
         'dry',
         500,
         'beef'
-    ),
-    new Food(
+    );
+    $dogFood3 = new Food(
         'Natural Trainer',
         'lorem ipsum dolor',
-        19,
+        -19,
         'https://arcaplanet.vtexassets.com/arquivos/ids/280402-200-200/expecial-cane-bocconcini-pollo-e-anatra.jpg?v=1780228938',
         $categories,
         true,
         'dry',
         300,
         'fish'
-    )
-];
+    );
+    $foodsArray = [
+        $dogFood,
+        $dogFood2,
+        $dogFood3
+    ]
+;
+}
+catch (Exception $err) {
+
+}
 
 header('Content-Type: application/json');
 echo json_encode($foodsArray);

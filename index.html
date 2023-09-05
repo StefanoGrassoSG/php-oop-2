@@ -50,30 +50,35 @@
 
             <main>
                 <div class="container-cards">
-                    <div class="card" v-for="(singleFood, i) in foods">
-                        <div class="img-card">
-                            <img :src="singleFood.img" alt="">
-                        </div>
-                        <div class="info">
-                            <h3>
-                                {{ singleFood.name }}
-                            </h3>
-                            <h4>
-                                Type: {{singleFood.type}}
-                            </h4>
-                            <div class="icon">
-                                Category: <i :class="stringToIcon(i)" style="color: #000000;"></i>
+                        <div class="card" v-for="(singleFood, i) in foods">
+                            <div class="img-card">
+                                <img :src="singleFood.img" alt="">
                             </div>
-                            <div class="price">
-                                {{ formatPrice(singleFood.price) }}€
+                            <div class="info">
+                                <h3>
+                                    {{ singleFood.name }}
+                                </h3>
+                                <h4>
+                                    Type: {{singleFood.type}}
+                                </h4>
+                                <div class="icon">
+                                    Category: <i :class="stringToIcon(i)" style="color: #000000;"></i>
+                                </div>
+                                <div class="price">
+                                    {{ formatPrice(singleFood.price) }}€
+                                </div>
+                            </div>
+                            <div class="button">
+                                <button>
+                                    Buy
+                                </button>
                             </div>
                         </div>
-                        <div class="button">
-                            <button>
-                                Buy
-                            </button>
+                        <div v-if="empty">
+                            <h2>
+                                SI è VERIFICATO UN ERRORE
+                            </h2>
                         </div>
-                    </div>
                 </div>
             </main>
         </div>

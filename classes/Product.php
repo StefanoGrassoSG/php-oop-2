@@ -20,6 +20,9 @@ class Product {
         if(is_numeric($price) && $price > 0) {
             $this->price = $price;
         }
+        else {
+            throw new InvalidArgumentException('valore prezzo non valido');
+        }
         $this->img = $img;
         $this->category = $category;
         $this->avaiable = $avaiable;
